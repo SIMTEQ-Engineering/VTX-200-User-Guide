@@ -1,7 +1,31 @@
-# FAQ
+# Frequently Asked Questions (FAQ)
 
-**Q: Where do I get software updates?**  
-A: Updates ship with authorized hardware. Docs track user-facing changes here.
+---
 
-**Q: Can I access the source code?**  
-A: No. The VTX-200 UI is proprietary and not open source.
+## ❓ Can multiple students connect at once?
+
+Yes — up to 10 devices can connect to the VTX-200 controller simultaneously.
+
+---
+
+## ❓ Can data be analysed in MATLAB/Python?
+
+Yes. CSV files open cleanly in:
+- MATLAB
+- Python (Pandas)
+- Excel
+- Google Sheets
+
+---
+
+## ❓ Can we modify the UI?
+
+The UI software is proprietary and not modifiable,  
+but documentation, experiments, and CSV analysis are fully open.
+
+---
+
+## ❓ What if the tunnel readings drift slightly?
+
+This is normal for strain-gauge systems.  
+Use **Zero Scales** before each run.
