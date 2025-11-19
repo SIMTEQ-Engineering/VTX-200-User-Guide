@@ -30,25 +30,25 @@ For full instructions, see:
 
 ## 📘 Documentation Index
 
-- 📄 [Getting Started](docs/getting-started.md)  
-- 💨 [Dashboard Layout](docs/dashboard-layout.md)  
-- 🎛️ [Controls](docs/controls.md)  
-- 📊 [Interpreting Data](docs/interpreting-data.md)  
-- 🧰 [Troubleshooting](docs/troubleshooting.md)  
-- ❓ [FAQ](docs/faq.md)  
-- 📝 [Changelog](CHANGELOG.md)
+-  [Getting Started](docs/getting-started.md)  
+-  [Dashboard Layout](docs/dashboard-layout.md)  
+-  [Controls](docs/controls.md)  
+-  [Interpreting Data](docs/interpreting-data.md)  
+-  [Troubleshooting](docs/troubleshooting.md)  
+-  [FAQ](docs/faq.md)  
+-  [Changelog](CHANGELOG.md)
 
 ---
 
 ## 💬 Community & Support
 
-- 🗨️ **Questions & Help:**  
+-  **Questions & Help:**  
 https://github.com/SIMTEQ-Engineering/VTX-200-User-Guide/discussions  
 
-- 🐞 **Report Documentation Bugs:**  
+-  **Report Documentation Bugs:**  
 https://github.com/SIMTEQ-Engineering/VTX-200-User-Guide/issues  
 
-- 📧 **Contact Simteq Engineering:**  
+-  **Contact Simteq Engineering:**  
 info@simteq.co.za  
 https://www.simteq.co.za
 
