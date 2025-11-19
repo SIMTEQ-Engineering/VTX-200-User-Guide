@@ -1,107 +1,180 @@
 # VTX-200 Wind Tunnel UI – User Manual
 
 [![Docs Status](https://img.shields.io/badge/docs-stable-success)](#)
-[![Docs Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FDanBStone%2FVTX_WebApp_Manual%2Fmain%2Fdocs%2Fversion.json&label=docs%20version&query=%24.version&prefix=v)](CHANGELOG.md)
-[![Issues](https://img.shields.io/github/issues/DanBStone/VTX_WebApp_Manual)](https://github.com/DanBStone/VTX_WebApp_Manual/issues)
-[![Discussions](https://img.shields.io/github/discussions/DanBStone/VTX_WebApp_Manual)](https://github.com/DanBStone/VTX_WebApp_Manual/discussions)
+[![Docs Version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FSIMTEQ-Engineering%2FVTX-200-User-Guide%2Fmain%2Fdocs%2Fversion.json&label=docs%20version&query=%24.version&prefix=v)](CHANGELOG.md)
+[![Issues](https://img.shields.io/github/issues/SIMTEQ-Engineering/VTX-200-User-Guide)](https://github.com/SIMTEQ-Engineering/VTX-200-User-Guide/issues)
+[![Discussions](https://img.shields.io/github/discussions/SIMTEQ-Engineering/VTX-200-User-Guide)](https://github.com/SIMTEQ-Engineering/VTX-200-User-Guide/discussions)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-informational)](LICENSE)
 
-This repository is the **official instruction manual** for the VTX-200 Wind Tunnel Web App, developed by **Simteq Engineering**.  
-> **Note:** This repository contains **documentation only**. The VTX-200 UI software is proprietary and distributed with authorized hardware.
+---
+
+This repository contains the **official user manual** for the **VTX-200 Wind Tunnel Web App**, developed and maintained by **Simteq Engineering**.
+
+> ⚠️ **Note:**  
+> This repository contains **documentation only**.  
+> The VTX-200 UI software is **proprietary** and is distributed only with authorized hardware.
 
 ---
 
 ## Overview
 
-The VTX-200 UI is a web-based dashboard for real-time monitoring, data logging, and control of the VTX-200 wind tunnel system.  
-The web app is **pre-installed** on your wind tunnel hardware—no extra setup is needed.
+The VTX-200 UI is a browser-based dashboard for:
+
+- Real-time lift & drag measurement  
+- Pressure readings (pitot/static)  
+- Angle-of-attack monitoring  
+- Wind speed visualization  
+- Data logging and CSV export  
+- Zeroing/tare functions  
+
+The user interface is **pre-installed** on your VTX-200 wind tunnel controller—no software installation is required.
 
 ---
 
 ## Accessing the Web App
 
 1. Power on your VTX-200 wind tunnel controller.  
-2. Connect to Wi-Fi:
-   - **SSID:** `WindTunnel_AP`
+2. Connect your device to the controller’s Wi-Fi network:
+
+   - **SSID:** `WindTunnel_AP`  
    - **Password:** `12345678`
-3. In a browser, open: `http://192.168.4.1`
+
+3. Open a browser and go to:
+
+   ```
+   http://192.168.4.1
+   ```
 
 ---
 
 ## Dashboard Layout
 
-- **Lift & Drag Card** – Real-time wall/floor balance readings; toggle “Wall/Floor”.
-- **Pressure Card** – Dynamic/static pressure (e.g., pitot).
-- **Angle of Attack Card** – Current AOA in degrees.
-- **Wind Speed Card** – Real-time airspeed (m/s).
+### **Lift & Drag Card**
+- Displays real-time load cell data.
+- Toggle between **Wall** and **Floor** balance readings.
+
+### **Pressure Card**
+- Shows pitot/static pressure readings.
+
+### **Angle of Attack**
+- Displays the current AOA (degrees).
+
+### **Wind Speed**
+- Shows real-time airspeed derived from pressure.
 
 ---
 
 ## Controls
 
-- **Start Recording** – Begin logging sensor data.
-- **Stop Recording** – Stop logging.
-- **Download CSV** – Export recorded data for Excel/MATLAB/etc.
-- **Zero Scales** – Tare strain gauges with the model stationary.
+### **Start Recording**
+Begins logging all incoming sensor data.
 
-**Command sent by UI:** `"tare"` when “Zero Scales” is clicked.
+### **Stop Recording**
+Ends the logging session.
+
+### **Download CSV**
+Exports the recorded session for Excel, MATLAB, Python, etc.
+
+### **Zero Scales**
+Tares the balance system.
+
+**Command sent to controller:**  
+```
+"tare"
+```
 
 ---
 
 ## Interpreting Data
 
-- **Lift/Drag** – grams (g) or Newtons (N) (device-configured).  
-- **Pressure** – From tunnel sensors.  
-- **AOA** – Degrees (°).  
-- **Wind Speed** – m/s.
+### **Lift & Drag**
+Displayed in either:
+- grams (g), or  
+- Newtons (N)  
+
+(based on device configuration)
+
+### **Pressure**
+Raw and derived pressure values from built-in sensors.
+
+### **Angle of Attack**
+Reported in degrees (°).
+
+### **Wind Speed**
+Reported in meters per second (m/s).
 
 ---
 
 ## Best Practices
 
-- Always zero (tare) the strain gauges before starting a test.
-- Wait for readings to stabilize before recording data.
-- Download your CSV file after each recording session.
+- Always **zero/tare** the balance before each test.  
+- Allow readings to stabilize before recording.  
+- Download your CSV **after each session** to avoid data loss.  
+- Ensure the VTX-200 controller has a stable power supply during tests.
+
+---
 
 ## Troubleshooting
 
-- **Web app doesn’t load:**  
-    - Make sure you are connected to `WindTunnel_AP` WiFi.
-    - Ensure the controller is powered on.
-    - Try refreshing your browser or a different device.
-- **No live data:**  
-    - Check that all hardware and sensors are properly connected.
-    - Try zeroing the scales if readings are stuck.
+### Web App Not Loading
+- Confirm connection to `WindTunnel_AP`
+- Try refreshing the browser
+- Ensure the controller is powered on
+- Test using a different phone/tablet/laptop
+
+### No Live Data
+- Confirm sensors are correctly connected
+- Verify wiring to load cells and pressure sensors
+- Try using **Zero Scales** to reinitialize
 
 ---
 
 ## Changelog & Versioning
 
-- **Docs version badge** (top of page) tracks the file `docs/version.json` which is **automatically updated** when Simteq publishes a new software release.
-- The **CHANGELOG** below lists user-facing changes that affect operation.
+- The **docs version badge** at the top reads from:
 
-See: [Changelog](#) and [`CHANGELOG.md`](CHANGELOG.md).
+  ```
+  docs/version.json
+  ```
 
----
+- `CHANGELOG.md` contains all user-visible changes across releases.
 
-## Community
-
-- **Issues** – Report bugs, ask questions, and request features.  
-- **Discussions** – Q&A, ideas, and announcements.
-
-Before filing an issue, please read our [CONTRIBUTING](CONTRIBUTING.md) guide and [SUPPORT](SUPPORT.md).
+👉 See: [`CHANGELOG.md`](CHANGELOG.md)
 
 ---
 
-## Contact & Support
+## Community & Support
+
+### Issues
+Use GitHub Issues for:
+- Bug reports  
+- Clarification questions  
+- Documentation errors  
+
+👉 https://github.com/SIMTEQ-Engineering/VTX-200-User-Guide/issues
+
+### Discussions
+Use Discussions for:
+- Q&A  
+- Feature ideas  
+- Announcements  
+
+👉 https://github.com/SIMTEQ-Engineering/VTX-200-User-Guide/discussions
+
+---
+
+## Contact
 
 **Simteq Engineering**  
-📧 [info@simteq.co.za](mailto:info@simteq.co.za)  
+📧 info@simteq.co.za  
 🌐 https://www.simteq.co.za
 
 ---
 
-## License (Docs Only)
+## License (Documentation Only)
 
-Documentation is licensed under **CC BY-NC-SA 4.0**.  
-The VTX-200 UI software is **not** open source and is distributed only with authorized hardware.
+This documentation is licensed under:
+
+**Creative Commons CC BY-NC-SA 4.0**  
+
+The **VTX-200 software** is *not* open source and is only distributed with official hardware.
